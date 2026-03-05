@@ -1,0 +1,7 @@
+[
+  {
+    "directory": "/home/work/LinuxDriverDemo/01_hello_driver",
+    "command": "/home/work/SDK/toolchain/bin/aarch64-linux-gnu-gcc -I/home/work/SDK/kernel/include -I/home/work/SDK/kernel/include/linux -I/home/work/SDK/kernel/include/asm-generic -I/home/work/SDK/kernel/arch/arm64/include -I/home/work/SDK/kernel/arch/arm64/include/generated -I/home/work/SDK/kernel/arch/arm64/include/uapi -I/home/work/SDK/kernel/arch/arm64/include/generated/uapi -I/home/work/SDK/kernel/include/uapi -I/home/work/SDK/kernel/include/generated -I/home/work/SDK/toolchain/include -D__KERNEL__ -DMODULE -std=gnu11 -c helloworld.c",
+    "file": "helloworld.c"
+  }
+]

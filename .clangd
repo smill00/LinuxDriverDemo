@@ -1,0 +1,27 @@
+CompileFlags:
+  Add:
+    - -I/home/work/SDK/kernel/include
+    - -I/home/work/SDK/kernel/include/linux
+    - -I/home/work/SDK/kernel/include/asm-generic
+    - -I/home/work/SDK/kernel/arch/arm64/include
+    - -I/home/work/SDK/kernel/include/uapi
+    - -I/home/work/SDK/kernel/include/generated
+    - -I/home/work/SDK/toolchain/include
+    - -std=gnu11
+    - -D__KERNEL__
+    - -DMODULE
+    - -D__UNIQUE_ID(prefix)=__PASTE(__PASTE(__UNIQUE_ID_, prefix), __COUNTER__)
+  Remove:
+    - -m32
+    - -m64
+
+Diagnostics:
+  ClangTidy:
+    Enable:
+      - -modernize-use-trailing-return-type
+      - -cppcoreguidelines-pro-bounds-array-to-pointer-decay
+  UnusedIncludes:
+    Strict: false
+  Suppress:
+    - invalid_token_after_toplevel_declarator
+    - incomplete_type

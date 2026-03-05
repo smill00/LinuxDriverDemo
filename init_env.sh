@@ -2,13 +2,13 @@
 
 # 定义变量值（便于后续修改）
 KERNEL_DIR_VALUE="/home/work/SDK/kernel"
-TOOLCHAIN_DIR_VALUE="/home/work/SDK/gcc-linaro-6.3.1-2017.05-x86_64_aarch64-linux-gnu"
+TOOLCHAIN_DIR_VALUE="/home/work/SDK/toolchain"
 INSTALL_HOST_VALUE="root@192.168.2.33"
 
 # 定义要添加的环境变量
 ENV_VARS=("export KERNEL_DIR=$KERNEL_DIR_VALUE"
-          "export TOOLCHINA_DIR=$TOOLCHAIN_DIR_VALUE"
-          "export PATH=$SDKTOOLCHAIN_DIR_VALUE/bin:$PATH"
+          "export TOOLCHAIN_DIR=$TOOLCHAIN_DIR_VALUE"
+          "export PATH=$TOOLCHAIN_DIR_VALUE/bin:$PATH"
           "export INSTALL_HOST=$INSTALL_HOST_VALUE")
 
 # 获取用户的bashrc文件路径
@@ -34,10 +34,10 @@ done
 
 # 执行source命令使环境变量生效
 echo "正在执行 source $BASHRC_FILE 使环境变量生效..."
-source "$BASHRC_FILE"
+source ~/.bashrc
 
 echo "环境初始化完成！"
 echo "当前环境变量设置："
 echo "KERNEL_DIR: $KERNEL_DIR"
-echo "TOOLCHINA_DIR: $TOOLCHINA_DIR"
+echo "TOOLCHAIN_DIR: $TOOLCHAIN_DIR"
 echo "INSTALL_HOST: $INSTALL_HOST"
